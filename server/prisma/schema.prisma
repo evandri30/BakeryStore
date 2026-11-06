@@ -1,0 +1,124 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id           String     @id @default(cuid())
+  name         String
+  email        String     @unique
+  passwordHash String
+  createdAt    DateTime   @default(now())
+  addresses    Address[]
+  cartItems    CartItem[]
+  orders       Order[]
+  favorites    Favorite[]
+}
+
+// Money is stored as whole rupiah in Int. Never floats.
+model Product {
+  id          String      @id @default(cuid())
+  name        String
+  description String[]
+  price       Int
+  offerPrice  Int
+  images      String[]
+  category    String
+  stock       Int         @default(0)
+  massGrams   Int
+  expiredAt   DateTime?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  cartItems   CartItem[]
+  orderItems  OrderItem[]
+  favorites   Favorite[]
+
+  @@index([category])
+}
+
+model Address {
+  id        String  @id @default(cuid())
+  userId    String
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  firstName String
+  lastName  String
+  email     String
+  street    String
+  city      String
+  state     String
+  zipcode   String
+  country   String
+  phone     String
+  orders    Order[]
+
+  @@index([userId])
+}
+
+model CartItem {
+  userId    String
+  productId String
+  quantity  Int
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@id([userId, productId])
+}
+
+enum PaymentType {
+  COD
+  ONLINE
+}
+
+enum OrderStatus {
+  PROCESSING
+  PACKING
+  SHIPPING
+  DONE
+  CANCELLED
+}
+
+model Order {
+  id          String      @id @default(cuid())
+  userId      String
+  user        User        @relation(fields: [userId], references: [id])
+  addressId   String
+  address     Address     @relation(fields: [addressId], references: [id])
+  amount      Int
+  paymentType PaymentType
+  isPaid      Boolean     @default(false)
+  status      OrderStatus @default(PROCESSING)
+  snapToken   String? // Midtrans popup token, so an unpaid online order can be paid later
+  // Midtrans never accepts the same order_id twice, so every online payment attempt gets its own
+  // reference ("<orderId>-<suffix>"). Older orders have none and used the order id itself.
+  paymentRef       String?   @unique
+  paymentStartedAt DateTime? // the 60-minute payment window counts from here (falls back to createdAt)
+  items       OrderItem[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  @@index([userId, createdAt])
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  orderId   String
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  unitPrice Int // price at the moment of purchase
+}
+
+model Favorite {
+  userId    String
+  productId String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@id([userId, productId])
+}

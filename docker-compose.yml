@@ -1,0 +1,15 @@
+# Local development database. Production uses Neon (free tier).
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: rizquna
+      POSTGRES_PASSWORD: rizquna
+      POSTGRES_DB: rizquna
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

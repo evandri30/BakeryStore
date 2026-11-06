@@ -1,0 +1,117 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36 Edg/137.0.0.0" version="27.1.6">
+  <diagram name="Page-1" id="hn7rGJjCdzYfXZ9ZLsk9">
+    <mxGraphModel dx="1426" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-1" value="Admin" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" vertex="1" parent="1">
+          <mxGeometry x="120" y="80" width="240" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-3" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="IdkEX-wO0B-35H_ZXFYB-1">
+          <mxGeometry x="80" y="50" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-4" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;" edge="1" source="IdkEX-wO0B-35H_ZXFYB-3" parent="IdkEX-wO0B-35H_ZXFYB-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-5" value="Membuka Website" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="IdkEX-wO0B-35H_ZXFYB-1">
+          <mxGeometry x="40" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-19" value="Masukkan Username dan Password" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="IdkEX-wO0B-35H_ZXFYB-1">
+          <mxGeometry x="40" y="220" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-36" value="Melihat Halaman Tambah Produk" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="IdkEX-wO0B-35H_ZXFYB-1">
+          <mxGeometry x="50" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-37" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.442;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="IdkEX-wO0B-35H_ZXFYB-1" source="IdkEX-wO0B-35H_ZXFYB-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="280" y="550" as="sourcePoint" />
+            <mxPoint x="103" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-69" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="IdkEX-wO0B-35H_ZXFYB-1">
+          <mxGeometry x="85" y="410" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-2" value="Sistem" style="swimlane;whiteSpace=wrap;html=1;startSize=40;" vertex="1" parent="1">
+          <mxGeometry x="360" y="80" width="240" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-14" value="Menampilkan Halaman Login" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="IdkEX-wO0B-35H_ZXFYB-2">
+          <mxGeometry x="40" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-22" value="Validasi" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="IdkEX-wO0B-35H_ZXFYB-2">
+          <mxGeometry x="30" y="210" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-33" value="ya" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IdkEX-wO0B-35H_ZXFYB-2">
+          <mxGeometry x="20" y="290" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-34" value="Menampilkan Halaman Tambah Produk" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="IdkEX-wO0B-35H_ZXFYB-2">
+          <mxGeometry x="40" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-17" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="IdkEX-wO0B-35H_ZXFYB-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-120" y="200" as="sourcePoint" />
+            <mxPoint x="100" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-31" value="tidak" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="IdkEX-wO0B-35H_ZXFYB-2">
+          <mxGeometry x="190" y="180" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-83" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="IdkEX-wO0B-35H_ZXFYB-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="250" as="sourcePoint" />
+            <mxPoint x="190" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-6" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="IdkEX-wO0B-35H_ZXFYB-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="430" as="sourcePoint" />
+            <mxPoint x="400" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-21" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="IdkEX-wO0B-35H_ZXFYB-19">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="430" as="sourcePoint" />
+            <mxPoint x="390" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-32" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="IdkEX-wO0B-35H_ZXFYB-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="430" as="sourcePoint" />
+            <mxPoint x="430" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-35" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="IdkEX-wO0B-35H_ZXFYB-34" target="IdkEX-wO0B-35H_ZXFYB-36">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="640" as="sourcePoint" />
+            <mxPoint x="290" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-71" value="" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="IdkEX-wO0B-35H_ZXFYB-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="280" as="sourcePoint" />
+            <mxPoint x="450" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-76" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="280" as="sourcePoint" />
+            <mxPoint x="240" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-84" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="230" as="sourcePoint" />
+            <mxPoint x="550" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IdkEX-wO0B-35H_ZXFYB-85" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="IdkEX-wO0B-35H_ZXFYB-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="230" as="sourcePoint" />
+            <mxPoint x="460" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,68 @@
+@import 'tailwindcss';
+
+/*
+ * "Dari dapur rumah": a family bakery kitchen. Flour-white page, kraft paper bags,
+ * cocoa-brown ink, a little butter yellow, and pandan green kept for "fresh/success".
+ * The colors are swapped as a whole for dark mode (see [data-theme='dark'] below),
+ * so components use the same class names in both themes.
+ */
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Young Serif', Georgia, serif;
+  --font-hand: 'Kalam', 'Plus Jakarta Sans', cursive;
+
+  --color-tepung: #fffcf7; /* page background */
+  --color-kertas: #ffffff; /* raised surfaces: inputs, forms, menus */
+  --color-adonan: #f6ede3; /* soft panels */
+  --color-garis: #eadfd2; /* borders */
+  --color-kraft: #c9a27e; /* kraft paper: price tags, footer */
+  --color-kraft-tua: #a97f5a;
+  --color-cokelat: #4a2c1d; /* text and primary buttons */
+  --color-cokelat-tua: #2e1a10; /* primary button hover */
+  --color-tinta: #2e1a10; /* ink on kraft or butter; the same in both themes */
+  --color-mentega: #f3c969;
+  --color-pandan: #2f6b4f;
+  --color-gosong: #b23a2a;
+}
+
+/* Dark mode: the kitchen at night. Dark crust brown page, cream text, kraft stays paper. */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-tepung: #1c130d;
+  --color-kertas: #261a12;
+  --color-adonan: #2d2018;
+  --color-garis: #3e2d22;
+  --color-kraft: #b8916d;
+  --color-kraft-tua: #d6b48f;
+  --color-cokelat: #f3e6d6;
+  --color-cokelat-tua: #fff7ec;
+  --color-pandan: #3a7d5d;
+  --color-gosong: #c9483a;
+}
+
+@layer base {
+  body {
+    @apply bg-tepung font-sans text-cokelat antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-cokelat);
+    outline-offset: 2px;
+  }
+  dialog::backdrop {
+    background: rgb(20 12 8 / 0.6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
